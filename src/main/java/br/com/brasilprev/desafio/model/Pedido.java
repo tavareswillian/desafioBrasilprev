@@ -11,6 +11,7 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 import br.com.brasilprev.desafio.util.FormaPagamento;
+import br.com.brasilprev.desafio.util.StatusPagamento;
 
 @Entity
 @Table(name="TB_PEDIDO")
@@ -31,6 +32,8 @@ public class Pedido implements Serializable{
 	private Date dtVenda;
 	
 	private Long idCliente;
+	
+	private StatusPagamento statusPagamento;
 	
 	private Long idNotaFiscal;
 	
@@ -99,4 +102,20 @@ public class Pedido implements Serializable{
 	public void setParcela(Parcela parcela) {
 		this.parcela = parcela;
 	}
+
+	public Produto getProduto() {
+		return produto;
+	}
+
+	public void setProduto(Produto produto) {
+		this.produto = produto;
+	}
+
+	public StatusPagamento getStatusPagamento() {
+		return statusPagamento;
+	}
+
+	public void setStatusPagamento(StatusPagamento statusPagamento) {
+		this.statusPagamento = statusPagamento;
+	}	
 }

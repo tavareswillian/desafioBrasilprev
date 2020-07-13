@@ -1,5 +1,6 @@
 package br.com.brasilprev.desafio.controller;
 
+import java.util.List;
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -13,7 +14,9 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import br.com.brasilprev.desafio.model.NotaFiscal;
+import br.com.brasilprev.desafio.model.Pedido;
 import br.com.brasilprev.desafio.repository.NotaFiscalRepository;
+import io.swagger.annotations.ApiOperation;
 
 @RestController
 @RequestMapping(value="/notaFiscal")
@@ -21,6 +24,12 @@ public class NotaFiscalController {
 
 		@Autowired
 		NotaFiscalRepository notaFiscalRepository;
+		
+		@GetMapping
+		@ApiOperation(value="Consulta a lista de NotasFiscais.")
+		public List<NotaFiscal> consultarProduto() {
+			return notaFiscalRepository.findAll();	
+		}
 		
 		@GetMapping("/{idNotaFiscal}")
 		public Optional<NotaFiscal> consultarNotaFiscal(@PathVariable("idNotaFiscal") Long idNotaFiscal) {

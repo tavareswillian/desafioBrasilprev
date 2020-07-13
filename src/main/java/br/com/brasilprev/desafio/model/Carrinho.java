@@ -20,6 +20,8 @@ public class Carrinho implements Serializable{
 	
 	private Produto produto;
 	
+	private Long idCliente;
+	
 	private Long idCupomCliente;
 	
 	private double vlTotal;
@@ -39,6 +41,18 @@ public class Carrinho implements Serializable{
 	public void setListaProdutos(Produto produto) {
 		this.produto = produto;
 	}
+	
+	public Long getIdCliente() {
+		return idCliente;
+	}
+
+	public void setIdCliente(Long idCliente) {
+		this.idCliente = idCliente;
+	}
+
+	public void setProduto(Produto produto) {
+		this.produto = produto;
+	}
 
 	public Long getIdCupomCliente() {
 		return idCupomCliente;
@@ -54,5 +68,5 @@ public class Carrinho implements Serializable{
 
 	public void setVlTotal(double vlTotal) {
 		this.vlTotal = vlTotal;
-	}	
+	}
 }

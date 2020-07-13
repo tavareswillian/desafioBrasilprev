@@ -24,6 +24,8 @@ public class Categoria implements Serializable{
 	
 	private Long idCategoriaMae;
 
+	private Long idGrupoCategoria;
+	
 	public Long getIdCategoria() {
 		return idCategoria;
 	}
@@ -54,5 +56,13 @@ public class Categoria implements Serializable{
 
 	public void setIdCategoriaMae(Long idCategoriaMae) {
 		this.idCategoriaMae = idCategoriaMae;
+	}
+
+	public Long getIdGrupoCategoria() {
+		return idGrupoCategoria;
+	}
+
+	public void setIdGrupoCategoria(Long idGrupoCategoria) {
+		this.idGrupoCategoria = idGrupoCategoria;
 	}
 }

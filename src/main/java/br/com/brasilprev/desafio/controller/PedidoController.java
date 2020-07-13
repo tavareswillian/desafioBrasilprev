@@ -1,5 +1,6 @@
 package br.com.brasilprev.desafio.controller;
 
+import java.util.List;
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -13,32 +14,40 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import br.com.brasilprev.desafio.model.Pedido;
+import br.com.brasilprev.desafio.model.Produto;
 import br.com.brasilprev.desafio.repository.PedidoRepository;
+import io.swagger.annotations.ApiOperation;
 
 @RestController
 @RequestMapping(value="/Pedido")
 public class PedidoController {
 
 		@Autowired
-		PedidoRepository PedidoRepository;
+		PedidoRepository pedidoRepository;
+		
+		@GetMapping
+		@ApiOperation(value="Consulta a lista de pedidos.")
+		public List<Pedido> consultarProduto() {
+			return pedidoRepository.findAll();	
+		}
 		
 		@GetMapping("/{idPedido}")
 		public Optional<Pedido> consultarPedido(@PathVariable("idPedido") Long idPedido) {
-			return PedidoRepository.findById(idPedido);	
+			return pedidoRepository.findById(idPedido);	
 		}
 		
 		@PostMapping
 		public Pedido cadastrarPedido(@RequestBody Pedido Pedido) {
-			return PedidoRepository.save(Pedido);	
+			return pedidoRepository.save(Pedido);	
 		}
 		
 		@PutMapping
 		public Pedido atualizarPedido(@RequestBody Pedido Pedido) {	
-			return PedidoRepository.save(Pedido);	
+			return pedidoRepository.save(Pedido);	
 		}
 		
 		@DeleteMapping("/{idPedido}")
 		public void removerPedido(@PathVariable("idPedido") Long idPedido) {
-			PedidoRepository.deleteById(idPedido);	
+			pedidoRepository.deleteById(idPedido);	
 		}
 }
