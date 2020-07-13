@@ -32,22 +32,32 @@ public class PedidoController {
 		}
 		
 		@GetMapping("/{idPedido}")
+		@ApiOperation(value="Consulta um pedido pelo ID.")
 		public Optional<Pedido> consultarPedido(@PathVariable("idPedido") Long idPedido) {
 			return pedidoRepository.findById(idPedido);	
 		}
 		
 		@PostMapping
-		public Pedido cadastrarPedido(@RequestBody Pedido Pedido) {
-			return pedidoRepository.save(Pedido);	
+		@ApiOperation(value="Cadastra novo  pedido.")
+		public Pedido cadastrarPedido(@RequestBody Pedido pedido) {
+			return pedidoRepository.save(pedido);	
 		}
 		
 		@PutMapping
-		public Pedido atualizarPedido(@RequestBody Pedido Pedido) {	
-			return pedidoRepository.save(Pedido);	
+		@ApiOperation(value="Atualiza um pedido.")
+		public Pedido atualizarPedido(@RequestBody Pedido pedido) {	
+			return pedidoRepository.save(pedido);	
 		}
 		
 		@DeleteMapping("/{idPedido}")
+		@ApiOperation(value="Remove um pedido pelo ID.")
 		public void removerPedido(@PathVariable("idPedido") Long idPedido) {
 			pedidoRepository.deleteById(idPedido);	
+		}
+		
+		@DeleteMapping
+		@ApiOperation(value="Remove um pedido enviado no corpo da requisição.")
+		public void removerPedido(@RequestBody Pedido pedido) {
+			pedidoRepository.delete(pedido);	
 		}
 }

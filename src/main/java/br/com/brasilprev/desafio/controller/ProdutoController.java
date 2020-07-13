@@ -32,22 +32,32 @@ public class ProdutoController {
 		}
 		
 		@GetMapping("/{idProduto}")
+		@ApiOperation(value="Consulta um produto pelo ID.")
 		public Optional<Produto> consultarProduto(@PathVariable("idProduto") Long idProduto) {
 			return produtoRepository.findById(idProduto);	
 		}
 		
 		@PostMapping
-		public Produto cadastrarProduto(@RequestBody Produto Produto) {
-			return produtoRepository.save(Produto);	
+		@ApiOperation(value="Cadastra um novo produto.")
+		public Produto cadastrarProduto(@RequestBody Produto produto) {
+			return produtoRepository.save(produto);	
 		}
 		
 		@PutMapping
-		public Produto atualizarProduto(@RequestBody Produto Produto) {	
-			return produtoRepository.save(Produto);	
+		@ApiOperation(value="Atualiza um produto.")
+		public Produto atualizarProduto(@RequestBody Produto produto) {	
+			return produtoRepository.save(produto);	
 		}
 		
 		@DeleteMapping("/{idProduto}")
+		@ApiOperation(value="Remove um produto pelo ID.")
 		public void removerProduto(@PathVariable("idProduto") Long idProduto) {
 			produtoRepository.deleteById(idProduto);	
+		}
+		
+		@DeleteMapping
+		@ApiOperation(value="Remove um produto enviado no corpo da requisição.")
+		public void removerProduto(@RequestBody Produto produto) {
+			produtoRepository.delete(produto);	
 		}
 }
