@@ -29,27 +29,31 @@ public class GrupoCategoriaController implements Serializable{
 	GrupoCategoriaRepository grupoCategoriaRepository;
 	
 	@GetMapping
-	@ApiOperation(value="Consulta a lista de grupos para categorias.")
-	public List<GrupoCategoria> consultarProduto() {
+	@ApiOperation(value="Consulta a lista de grupos de categorias.")
+	public List<GrupoCategoria> consultarGrupoCategoria() {
 		return grupoCategoriaRepository.findAll();	
 	}
 	
 	@GetMapping("/{idGrupoCategoria")
+	@ApiOperation(value="Consulta um grupo de categorias pelo ID.")
 	public Optional<GrupoCategoria> consultarGrupoCategoria(@PathVariable("/idGrupoCategoria") Long idGrupoCategoria) {
 		return grupoCategoriaRepository.findById(idGrupoCategoria);
 	}
 	
 	@PostMapping
+	@ApiOperation(value="Cadastra grupo de categorias.")
 	public GrupoCategoria cadastrarGrupoCategoria(@RequestBody GrupoCategoria grupoCategoria) {
 		return grupoCategoriaRepository.save(grupoCategoria);
 	}
 	
 	@PutMapping
+	@ApiOperation(value="Atualiza grupo de categorias.")
 	public GrupoCategoria atualizarGrupoCategoria(@RequestBody GrupoCategoria grupoCategoria) {
 		return grupoCategoriaRepository.save(grupoCategoria);
 	}
 	
 	@DeleteMapping
+	@ApiOperation(value="Remove grupo de categorias.")
 	public void removerGrupoCategoria(@RequestBody GrupoCategoria grupoCategoria) {
 		grupoCategoriaRepository.delete(grupoCategoria);
 	}
