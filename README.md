@@ -99,3 +99,12 @@ https://desafio-brasilprev-api-rest.herokuapp.com/Pedido
 
 <b>Listagem de produtos</b><br />
 https://desafio-brasilprev-api-rest.herokuapp.com/Produto
+
+<h2>Licença</h2>
+<p>
+	Este projeto é fornecido sob a Licença MIT - consulte o arquivo 
+	<a href="https://github.com/tavareswillian/desafioBrasilprev/blob/master/LICENSE">
+		LICENÇA.md
+	</a>
+	para mais detalhes.
+</p>
