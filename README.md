@@ -17,6 +17,16 @@
         Spring Boot
       </a>
     </li>
+        <li>
+	<a href="https://spring.io/guides/gs/accessing-data-jpa/">
+	Spring Data JPA
+	</a>
+    </li>
+    <li>
+	<a href="https://spring.io/guides/gs/serving-web-content/">
+	Spring MVC
+	</a>
+    </li>
     <li>
       <a href="https://www.postgresql.org/">
         PostgreSQL
@@ -46,16 +56,6 @@
        <a href="https://www.java.com/pt_BR/">
          Java 8
       </a>
-    </li>
-    <li>
-	<a href="https://spring.io/guides/gs/accessing-data-jpa/">
-	Spring Data JPA
-	</a>
-    </li>
-    <li>
-	<a href="https://spring.io/guides/gs/serving-web-content/">
-	Spring MVC
-	</a>
     </li>
    </ul>
 </p>
