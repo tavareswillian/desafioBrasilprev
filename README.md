@@ -47,6 +47,11 @@
          Java 8
       </a>
     </li>
+    <li>
+	<a href="https://spring.io/guides/gs/accessing-data-jpa/">
+	JPA
+	</a>
+    </li>
    </ul>
 </p>
 
