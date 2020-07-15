@@ -49,7 +49,12 @@
     </li>
     <li>
 	<a href="https://spring.io/guides/gs/accessing-data-jpa/">
-	JPA
+	Spring Data JPA
+	</a>
+    </li>
+    <li>
+	<a href="https://spring.io/guides/gs/serving-web-content/">
+	Spring MVC
 	</a>
     </li>
    </ul>
