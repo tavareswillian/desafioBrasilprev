@@ -1,6 +1,6 @@
 <h1> Desafio Brasilprev</h1>
 <p>
-  Projeto de API REST para o desafio Brasilprev.
+  Projeto de API REST em Java com Spring Boot para o desafio Brasilprev.
 </p>
 <p>
   Esta aplicação tem como objetivo fornecer uma API que atenda ao fluxo de um sistema de loja contendo elementos como Clientes, Produtos, Pedidos, entre outras funcionalidades.</p>
