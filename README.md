@@ -8,6 +8,11 @@
   <b>Tecnologias utilizadas:</b>
   <ul>
     <li>
+       <a href="https://www.java.com/pt_BR/">
+         Java 8
+      </a>
+    </li>
+    <li>
       <a href="https://www.redhat.com/pt-br/topics/api/what-are-application-programming-interfaces">
         API REST
       </a>
@@ -50,11 +55,6 @@
     <li>
       <a href="https://www.eclipse.org/downloads/">
         IDE Eclipse v.2019-09 R (4.13.0)
-      </a>
-    </li>
-    <li>
-       <a href="https://www.java.com/pt_BR/">
-         Java 8
       </a>
     </li>
    </ul>
