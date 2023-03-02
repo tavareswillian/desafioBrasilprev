@@ -14,7 +14,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import br.com.brasilprev.desafio.model.Carrinho;
-import br.com.brasilprev.desafio.model.Cliente;
 import br.com.brasilprev.desafio.repository.CarrinhoRepository;
 import io.swagger.annotations.ApiOperation;
 
